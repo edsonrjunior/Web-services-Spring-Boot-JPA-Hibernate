@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.edson.course</groupId>
-	<artifactId>course</artifactId>
+	<artifactId>springboot-jpa-hibernate</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>course</name>
+	<name>springboot-jpa-hibernate</name>
 	<description>Web services com Spring Boot e JPA / Hibernate</description>
 
 	<properties>
