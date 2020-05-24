@@ -1,4 +1,4 @@
-package br.com.edson.course.course.entities;
+package br.com.edson.course.entities;
 
 import java.io.Serializable;
 
