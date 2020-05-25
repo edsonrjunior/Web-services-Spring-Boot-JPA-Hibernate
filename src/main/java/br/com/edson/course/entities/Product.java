@@ -29,6 +29,7 @@ public class Product implements Serializable {
 	private String imgUrl;
 
 	// Set porque um mesmo produto não pode ter a mesma categoria mais de uma vez
+	//tb_product_category = tabela intermediária
 	@ManyToMany
 	@JoinTable(name = "tb_product_category", 
 	joinColumns = @JoinColumn(name = "product_id"), 
