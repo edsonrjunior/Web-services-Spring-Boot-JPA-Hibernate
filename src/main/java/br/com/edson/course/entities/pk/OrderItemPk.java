@@ -12,43 +12,39 @@ import br.com.edson.course.entities.Product;
 //Por ser uma classe de PK usar-se a anotação @Embedable
 
 @Embeddable
-public class OrderItemPk implements Serializable {
-
+public class OrderItemPK implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@ManyToOne
 	@JoinColumn(name = "order_id")
-	private Order Order;
-
+	private Order order;
+	
 	@ManyToOne
 	@JoinColumn(name = "product_id")
 	private Product product;
-
+	
 	public Order getOrder() {
-		return Order;
+		return order;
 	}
-
 	public void setOrder(Order order) {
-		Order = order;
+		this.order = order;
 	}
-
 	public Product getProduct() {
 		return product;
 	}
-
 	public void setProduct(Product product) {
 		this.product = product;
 	}
-
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((Order == null) ? 0 : Order.hashCode());
+		result = prime * result + ((order == null) ? 0 : order.hashCode());
 		result = prime * result + ((product == null) ? 0 : product.hashCode());
 		return result;
 	}
-
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -57,11 +53,11 @@ public class OrderItemPk implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		OrderItemPk other = (OrderItemPk) obj;
-		if (Order == null) {
-			if (other.Order != null)
+		OrderItemPK other = (OrderItemPK) obj;
+		if (order == null) {
+			if (other.order != null)
 				return false;
-		} else if (!Order.equals(other.Order))
+		} else if (!order.equals(other.order))
 			return false;
 		if (product == null) {
 			if (other.product != null)
@@ -70,5 +66,4 @@ public class OrderItemPk implements Serializable {
 			return false;
 		return true;
 	}
-
 }

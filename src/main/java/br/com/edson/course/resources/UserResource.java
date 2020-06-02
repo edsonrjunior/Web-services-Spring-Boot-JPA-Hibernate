@@ -1,4 +1,4 @@
-package br.com.edson.course.course.resources;
+package br.com.edson.course.resources;
 
 import java.util.List;
 
@@ -9,25 +9,25 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.edson.course.entities.Category;
-import br.com.edson.course.services.CategoryService;
+import br.com.edson.course.entities.User;
+import br.com.edson.course.services.UserService;
 
 @RestController
-@RequestMapping(value = "/categories")
-public class CategoryResource {
+@RequestMapping(value = "/users")
+public class UserResource {
 	
 	@Autowired
-	private CategoryService service;
+	private UserService service;
 	
 	@GetMapping
-	public ResponseEntity<List<Category>> findAll(){	
-		List<Category> list = service.findAll();
+	public ResponseEntity<List<User>> findAll(){	
+		List<User> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
 	
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<Category> findById(@PathVariable Long id){
-		Category obj = service.findById(id);
+	public ResponseEntity<User> findById(@PathVariable Long id){
+		User obj = service.findById(id);
 		return ResponseEntity.ok(obj);
 	}
 

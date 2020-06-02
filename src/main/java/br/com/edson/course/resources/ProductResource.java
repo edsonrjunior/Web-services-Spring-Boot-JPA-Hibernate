@@ -1,4 +1,4 @@
-package br.com.edson.course.course.resources;
+package br.com.edson.course.resources;
 
 import java.util.List;
 
