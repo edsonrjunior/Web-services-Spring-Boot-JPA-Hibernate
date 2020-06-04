@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
 import br.com.edson.course.entities.Order;
 import br.com.edson.course.entities.Product;
 
-//Por ser uma classe de PK usar-se a anotação @Embedable
+//Por ser uma classe de PK usar-se a anotação @Embeddable
 
 @Embeddable
 public class OrderItemPK implements Serializable {
